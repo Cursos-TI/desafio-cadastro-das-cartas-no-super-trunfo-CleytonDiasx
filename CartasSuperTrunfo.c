@@ -3,7 +3,7 @@
 int main() {
     //dados para carta 1
     int populacao, pontos_turisticos;
-    float area, pib;
+    float area, pib, pib_per_capito, densidade_populacional;
     char cidade[20];  //nome da cidade
     char estado[20];  //nome do estado
     char codigo[20];  // codigo da cidade
@@ -31,6 +31,9 @@ int main() {
 
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos_turisticos);
+    
+    densidade_populacional = populacao / area;
+    pib_per_capito = pib / populacao; 
 
     printf("\n"); //quebra de linha invisivel para separar na compilacao
 
@@ -43,12 +46,14 @@ int main() {
     printf("Area: %.2f Km²\n", area);
     printf("PIB: R$ %.2f\n", pib);
     printf("Numero de pontos turisticos: %d\n", pontos_turisticos);
+    printf("densidade populacional: %.3f\n", densidade_populacional);
+    printf("pib per capito: %.3f\n", pib_per_capito);
 
     printf("\n"); //quebra de linha invisivel para separar na compilacao
 
     //dados para carta 2
     int populacao2, pontos_turisticos2;
-    float area2, pib2;
+    float area2, pib2, pib_per_capito2, densidade_populacional2;
     char cidade2[50];  //nome da cidade
     char estado2[10];  //nome do estado
     char codigo2[20];  // codigo da cidade
@@ -77,6 +82,10 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos_turisticos2);
 
+    densidade_populacional2 = populacao2 / area2;
+    pib_per_capito2 = pib2 / populacao2; 
+
+
     printf("\n"); //quebra de linha invisivel para separar na compilacao
 
     // apresentacao da carta 2
@@ -88,6 +97,8 @@ int main() {
     printf("Area: %.2f Km²\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
     printf("Numero de pontos turisticos: %d\n", pontos_turisticos2);
+    printf("densidade populacional: %.3f\n", densidade_populacional2);
+    printf("pib per capito: %.3f\n", pib_per_capito2);
 
     return 0; 
 }
